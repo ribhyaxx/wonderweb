@@ -9,7 +9,20 @@ body {
   padding: 40px;
 }
 
-header h1 {
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* center horizontally */
+    gap: 15px; /* space between logo and header text */
+}
+
+header .logo {
+    height: 60px; /* adjust size */
+    width: auto;  /* keep aspect ratio */
+}
+
+h1 {
     font-family: 'Brush Script MT', cursive; /* Classic cursive font */
     font-size: 2.5em; /* Makes it bigger */
     color: #6a0dad; /* Optional: dark purple */
