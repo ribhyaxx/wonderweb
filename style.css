@@ -9,9 +9,11 @@ body {
   padding: 40px;
 }
 
-h1 {
-  font-size: 48px;
-  text-shadow: 2px 2px #ffffff;
+header h1 {
+    font-family: 'Brush Script MT', cursive; /* Classic cursive font */
+    font-size: 2.5em; /* Makes it bigger */
+    color: #6a0dad; /* Optional: dark purple */
+    letter-spacing: 1px; /* Slight spacing for style */
 }
 
 p {
