@@ -36,3 +36,12 @@ a:hover {
   padding: 1rem;
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.08);
 }
+button {
+  background: #6d28d9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
