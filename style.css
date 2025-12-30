@@ -1,37 +1,35 @@
 :root {
-  --bg-main: #050008;
+  --bg: #050008;
   --bg-soft: #120016;
   --purple: #9b5cff;
-  --purple-glow: #c084fc;
-  --text-main: #e5e5e5;
+  --glow: #c084fc;
+  --text: #e5e5e5;
   --border: #2a1f33;
 }
 
-/* base */
 * {
   box-sizing: border-box;
-  transition: all 0.25s ease;
 }
 
 body {
   margin: 0;
   font-family: "Times New Roman", serif;
-  background: radial-gradient(circle at top, #1a0025, #000000);
-  color: var(--text-main);
+  background: radial-gradient(circle at top, #1a0025, #000);
+  color: var(--text);
   min-height: 100vh;
 }
 
 /* header */
 header {
   padding: 20px;
-  background: linear-gradient(90deg, #0b0014, #1a0025);
   border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, #0b0014, #1a0025);
 }
 
 nav a {
   color: var(--purple);
   text-decoration: none;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 nav a:hover {
@@ -40,7 +38,6 @@ nav a:hover {
 
 /* walking text */
 .walking-text {
-  width: 100%;
   overflow: hidden;
   white-space: nowrap;
   border-top: 1px solid var(--border);
@@ -64,23 +61,20 @@ nav a:hover {
 /* content */
 .content {
   padding: 40px;
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
   text-align: center;
 }
 
 .sigil {
+  color: var(--glow);
   font-size: 20px;
-  margin: 20px 0;
-  color: var(--purple-glow);
 }
 
-/* glow text */
+/* glow */
 .glow {
-  color: var(--purple-glow);
-  text-shadow:
-    0 0 8px var(--purple),
-    0 0 18px var(--purple);
+  color: var(--glow);
+  text-shadow: 0 0 10px var(--purple), 0 0 20px var(--purple);
 }
 
 /* button */
@@ -99,20 +93,8 @@ nav a:hover {
 
 /* footer */
 footer {
-  padding: 20px;
   text-align: center;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-/* subtle float */
-.content p {
-  animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
+  padding: 20px;
+  opacity: 0.6;
 }
 
