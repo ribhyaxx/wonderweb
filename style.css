@@ -1,35 +1,58 @@
 :root {
-  --bg-main: #0b0014;
-  --bg-secondary: #131320;
-  --purple: #8b5cf6;
-  --text-main: #e5e7eb;
-  --border-dark: #27272a;
+  --bg-main: #050008;
+  --bg-soft: #120016;
+  --purple: #9b5cff;
+  --purple-glow: #c084fc;
+  --text-main: #e5e5e5;
+  --border: #2a1f33;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+  transition: all 0.25s ease;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(135deg, #6a00ff, #0b0014, #000000);
-  background-attachment: fixed;
+  font-family: "Times New Roman", serif;
+  background: radial-gradient(circle at top, #1a0025, #000000);
   color: var(--text-main);
+  min-height: 100vh;
 }
 
+/* header */
+header {
+  padding: 20px;
+  background: linear-gradient(90deg, #0b0014, #1a0025);
+  border-bottom: 1px solid var(--border);
+}
+
+nav a {
+  color: var(--purple);
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+nav a:hover {
+  text-shadow: 0 0 6px var(--purple);
+}
+
+/* walking text */
 .walking-text {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  position: relative;
-  border-top: 1px solid var(--border-dark);
-  border-bottom: 1px solid var(--border-dark);
-  background: rgba(0,0,0,0.4);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(0,0,0,0.5);
 }
 
 .walking-text span {
   display: inline-block;
   padding-left: 100%;
-  font-size: 16px;
+  animation: walk 14s linear infinite;
   letter-spacing: 4px;
-  animation: walk 12s linear infinite;
   color: var(--purple);
 }
 
@@ -37,4 +60,59 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(-100%); }
 }
-4
+
+/* content */
+.content {
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.sigil {
+  font-size: 20px;
+  margin: 20px 0;
+  color: var(--purple-glow);
+}
+
+/* glow text */
+.glow {
+  color: var(--purple-glow);
+  text-shadow:
+    0 0 8px var(--purple),
+    0 0 18px var(--purple);
+}
+
+/* button */
+.glow-btn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: #1a0025;
+  border: 1px solid var(--purple);
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 15px var(--purple);
+}
+
+/* footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* subtle float */
+.content p {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
