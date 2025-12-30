@@ -1,47 +1,40 @@
 :root {
-  --bg-main: #0b0b10;
+  --bg-main: #0b0014;
   --bg-secondary: #131320;
   --purple: #8b5cf6;
-  --purple-soft: #a78bfa;
   --text-main: #e5e7eb;
-  --text-muted: #9ca3af;
   --border-dark: #27272a;
 }
 
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background-color: var(--bg-main);
+  background: linear-gradient(135deg, #6a00ff, #0b0014, #000000);
+  background-attachment: fixed;
   color: var(--text-main);
 }
 
-header, footer {
-  background: var(--bg-secondary);
+.walking-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  border-top: 1px solid var(--border-dark);
   border-bottom: 1px solid var(--border-dark);
+  background: rgba(0,0,0,0.4);
 }
 
-a {
+.walking-text span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 16px;
+  letter-spacing: 4px;
+  animation: walk 12s linear infinite;
   color: var(--purple);
-  text-decoration: none;
 }
 
-a:hover {
-  color: var(--purple-soft);
-}
-
-.card {
-  background: #0f0f1a;
-  border: 1px solid var(--border-dark);
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.08);
-}
-button {
-  background: #6d28d9;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1rem;
-  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+@keyframes walk {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
 }
 
