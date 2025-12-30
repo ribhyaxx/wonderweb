@@ -1,89 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clove & cherry</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>clove & cherry</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body
- <div class="walking-text">
-  <span>✦ clove & cherry ✦ archive ✦ thoughts ✦ memories ✦</span>
-</div>
->   
-<header class="site-header">
-  <h1 class="site-title">clove & cherry archive</h1>
+<body>
 
-  <nav class="site-nav" aria-label="Main navigation">
-    <a href="index.html">Home</a>
-    <span class="divider">|</span>
-    <a href="about.html">Media</a>
-    <span class="divider">|</span>
-    <a href="contact.html">Links</a>
+<header>
+  <h1 class="glow">clove & cherry archive</h1>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="abt.html">About</a> |
+    <a href="#">Links</a>
   </nav>
 </header>
 
-    <main>
-        <h2> ⋆‧°𓏲ּ𝄢⊹₊˚‧︵‿₊୨ᰔ୧₊‿︵‧˚₊⊹
-     </h2>
-        <p>This site is an online journal built to untangle my thoughts </p>
+<div class="walking-text">
+  <span>✦ dreams ✦ memory ✦ spiral thoughts ✦ purple static ✦</span>
+</div>
 
-        <div class="image-container">
-            <img src="images/sample.jpg" alt="Sample Image">
-        </div>
+<main class="content">
+  <p class="sigil">*･ﾟ✧･ﾟ* ☽ *･ﾟ✧･ﾟ*</p>
 
-        <button id="funButton">Click me!</button>
-        <p id="funText"></p>
-    </main>
+  <p>
+    this site is a digital journal.  
+    fragments, moods, half-finished thoughts.  
+    a place to drift.
+  </p>
 
-    <footer>
-        <p>&copy; clove & cherry </p>
-    </footer>
+  <button class="glow-btn" onclick="pulse()">click me</button>
+</main>
 
-    <script src="script.js"></script>
+<footer>
+  © clove & cherry
+</footer>
+
+<script src="script.js"></script>
 </body>
-    body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: linear-gradient(135deg, #6a00ff, #0b0014, #000000);
-  background-attachment: fixed;
-  color: var(--text-main);
-}
-.glow {
-  text-shadow:
-    0 0 8px #8b5cf6,
-    0 0 16px #6a00ff;
-}
-* {
-  transition: all 0.25s ease;
-}
-
-    
-    <link rel="stylesheet" href="style.css">
-
 </html>
-.walking-text {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  border-top: 1px solid var(--border-dark);
-  border-bottom: 1px solid var(--border-dark);
-  background: rgba(0,0,0,0.4);
-}
-
-.walking-text span {
-  display: inline-block;
-  padding-left: 100%;
-  font-size: 16px;
-  letter-spacing: 4px;
-  animation: walk 12s linear infinite;
-  color: var(--purple);
-}
-
-@keyframes walk {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}<link rel="stylesheet" href="style.css">
-
 
