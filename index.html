@@ -49,3 +49,26 @@
     <link rel="stylesheet" href="style.css">
 
 </html>
+.walking-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  border-top: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-dark);
+  background: rgba(0,0,0,0.4);
+}
+
+.walking-text span {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 16px;
+  letter-spacing: 4px;
+  animation: walk 12s linear infinite;
+  color: var(--purple);
+}
+
+@keyframes walk {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
